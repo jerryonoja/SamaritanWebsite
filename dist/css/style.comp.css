@@ -145,8 +145,9 @@ a {
   flex-direction: column;
   justify-content: space-between; }
   .header__nav {
-    height: 7rem;
-    margin-top: 0.75rem;
+    height: 6.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center; }
