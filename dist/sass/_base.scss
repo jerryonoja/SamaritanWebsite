@@ -1,0 +1,80 @@
+/* FONTS */
+@font-face {
+  font-family: "Airbnb Cereal Extra Bold";
+  font-style: normal;
+  font-weight: bolder;
+  src: url("../fonts/airbnb-cereal/AirbnbCerealExtraBold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Airbnb Cereal Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/airbnb-cereal/AirbnbCerealBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Airbnb Cereal Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/airbnb-cereal/AirbnbCerealBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Airbnb Cereal Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/airbnb-cereal/AirbnbCerealMedium.ttf") format("truetype");
+}
+
+// COLOR DECLARATIONS
+:root {
+  --diagon-red: #ed0101;
+  --diagon-bg-light: #181d33;
+  --diagon-blue-dark: #0d6de6;
+  --diagon-blue-light: #158eff;
+
+  --diagon-grey-light-1: #faf9f9;
+  --diagon-grey-light-2: #f4f2f2;
+  --diagon-grey-light-3: #f0eeee;
+  --diagon-grey-light-4: #ccc;
+
+  --diagon-grey-dark-1: #1d1e20;
+  --diagon-grey-dark-2: #444;
+  --diagon-grey-dark-3: #777;
+  --diagon-grey-dark-4: #999;
+}
+
+$screen-largest: 75em; // 1200px
+$screen-large: 68.75em; // 1100px
+$screen-medium: 60em; // 960px
+$screen-small: 37.5em; // 600px
+$screen-smallest: 31.25em; // 500px
+$screen-phone: 23.4375em; // 360px
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+::selection {
+  background-color: var(--diagon-blue-light);
+  color: #fff;
+}

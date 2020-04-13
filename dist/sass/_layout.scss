@@ -1,0 +1,198 @@
+//////////////////////
+//HEADER SECTION
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(#000, 0.25),
+      rgba(#000, 0.45)
+    ),
+    url(../images/banner.jpg);
+  background-size: cover;
+  background-position: top;
+  z-index: 1;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__nav {
+    height: 7rem;
+    margin-top: 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-logo {
+      height: 6rem;
+
+      @media only screen and (max-width: $screen-small) {
+        margin: 1rem;
+      }
+    }
+
+    &-logo-big {
+      height: 4rem;
+
+      @media only screen and (max-width: $screen-small) {
+        margin: 1rem;
+      }
+    }
+  }
+
+  .header__container {
+    max-width: 140rem;
+    margin: 0 auto;
+  }
+
+  &__text-box {
+    padding: 2rem;
+    max-width: 100rem;
+    margin: -15% auto 0 auto;
+
+    @media only screen and (max-width: $screen-medium) {
+      padding: -10%;
+    }
+
+    @media only screen and (max-width: $screen-phone) {
+      margin-top: -2.5%;
+      padding: 1.5rem;
+    }
+
+    @media only screen and (max-width: 320px) {
+      margin-top: 0.5%;
+    }
+
+    .heading-primary {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @media only screen and (max-width: $screen-medium) {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $screen-phone) {
+        margin-bottom: 1rem;
+      }
+
+      &--main {
+        color: #fff;
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        font-family: "Airbnb Cereal Bold", sans-serif;
+        position: relative;
+        margin-bottom: 3.5rem;
+        padding: 0 2rem 0 0;
+
+        @media only screen and (max-width: $screen-smallest) {
+          font-size: 4.5rem;
+        }
+
+        @media only screen and (max-width: 414px) {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+          padding: 0;
+        }
+
+        @media only screen and (max-width: 320px) {
+          font-size: 2.5rem;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 4px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: -12px;
+          background: var(--diagon-red);
+          border-radius: 47px;
+        }
+      }
+
+      &--sub {
+        color: var(--diagon-grey-light-2);
+        display: block;
+        font-size: 2.75rem;
+        word-spacing: 0.25rem;
+        letter-spacing: -0.1rem;
+        font-family: "Airbnb Cereal Medium", sans-serif;
+        font-weight: 500;
+
+        @media only screen and (max-width: 414px) {
+          font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $screen-phone) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .header__buttons {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+
+      @media only screen and (max-width: $screen-small) {
+        flex-direction: column;
+      }
+
+      .btn {
+        margin: 1rem;
+
+        @media only screen and (max-width: $screen-medium) {
+          margin-right: 0;
+        }
+
+        @media only screen and (max-width: $screen-small) {
+          margin: 0.75rem 0;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin-bottom: 20px;
+    ul {
+      li {
+        font-size: 16px;
+        display: inline;
+        padding: 5px 20px;
+        font-family: "Airbnb Cereal Book", sans-serif;
+        color: #fff;
+
+        a {
+          transition: all 0.4s;
+          color: #ffffff;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          i {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .request-form {
+    margin-top: -15%;
+    background-color: #fff;
+    padding: 1.5rem;
+
+    label {
+      font-family: "Airbnb Cereal Medium";
+    }
+  }
+}

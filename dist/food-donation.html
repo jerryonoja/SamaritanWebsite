@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="wide wow-animation smoothscroll scrollTo" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Samaritan - Food Donation Request</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Samaritan Humanitarian App" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="header__nav">
+        <a href="index.html">
+          <img
+            src="images/logo.png"
+            alt="Samaritan Logo"
+            height="75px"
+            class="header__nav-logo-big"
+          />
+        </a>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <form
+              class="request-form"
+              method="POST"
+              name="SamaritanFoodDonation"
+              data-netlify="true"
+            >
+              <div class="form-group">
+                <label>* Full Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="e.g Bola Eze"
+                />
+              </div>
+              <div class="form-group">
+                <label>* Phone Number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="e.g 08032456789"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>* Full Address</label>
+                <input
+                  id="description"
+                  name="address"
+                  class="form-control"
+                  placeholder="e.g 5 Bolaji Street, Ikeja, Lagos"
+                />
+              </div>
+              <div class="form-group">
+                <label>* List Food Items Seperated by Comma</label>
+                <textarea
+                  id="description"
+                  name="address"
+                  class="form-control"
+                  placeholder="e.g Rice, Beans, Yam..."
+                  rows="2"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="button-submmited"
+                  style="display: none;"
+                  disabled
+                >
+                  <span
+                    class="spinner-border spinner-border-sm btn-block"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Submitting...
+                </button>
+                <button
+                  type="submit"
+                  id="button-unsubmmited"
+                  class="btn btn-primary"
+                >
+                  Submit Request
+                </button>
+
+                <span class="text-center p-4" style="font-size: 18px;">OR</span>
+                <a
+                  href="money-donation.html"
+                  type="submit"
+                  class="btn btn-success"
+                  style="color: #fff;"
+                >
+                  Money Donation
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="header__footer">
+        <ul>
+          <li>
+            <a href="https://facebook.com/samaritanng"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/samaritanng"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/samaritan-ng"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function (event) {
+          document.getElementById("button-unsubmmited").style.display = "none";
+          document.getElementById("button-submmited").style.display = "block";
+          event.preventDefault();
+
+          var $form = $(this);
+
+          $.post($form.attr("action"), $form.serialize()).then(function () {
+            document.getElementById("button-unsubmmited").style.display =
+              "block";
+            document.getElementById("button-submmited").style.display = "none";
+            swal(
+              "success!",
+              "Request Successfully submitted. A samaritan administrator will reach out to you soon.",
+              "success"
+            ).then((value) => {
+              window.location = "https://samaritan.ng";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
