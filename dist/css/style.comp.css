@@ -197,7 +197,7 @@ a {
         padding: 0 2rem 0 0; }
         @media only screen and (max-width: 31.25em) {
           .header__text-box .heading-primary--main {
-            font-size: 4.5rem; } }
+            font-size: 3.5rem; } }
         @media only screen and (max-width: 414px) {
           .header__text-box .heading-primary--main {
             font-size: 3rem;
@@ -230,7 +230,7 @@ a {
             font-size: 2rem; } }
         @media only screen and (max-width: 23.4375em) {
           .header__text-box .heading-primary--sub {
-            font-size: 1.8rem; } }
+            font-size: 1.6rem; } }
     .header__text-box .header__buttons {
       display: flex;
       flex-direction: row;
