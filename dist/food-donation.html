@@ -62,7 +62,7 @@
               data-netlify="true"
             >
               <div class="form-group">
-                <label>* Full Name</label>
+                <label>* Name</label>
                 <input
                   id="name"
                   name="name"
@@ -81,7 +81,7 @@
               </div>
 
               <div class="form-group">
-                <label>* List Food Items Seperated by Comma</label>
+                <label>* List food items you want to donate</label>
                 <textarea
                   id="description"
                   name="address"
@@ -90,37 +90,39 @@
                   rows="2"
                 ></textarea>
               </div>
-              <div class="text-center">
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                  id="button-submmited"
-                  style="display: none;"
-                  disabled
-                >
-                  <span
-                    class="spinner-border spinner-border-sm btn-block"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                  Submitting...
-                </button>
-                <button
-                  type="submit"
-                  id="button-unsubmmited"
-                  class="btn btn-primary btn-block"
-                >
-                  Submit Request
-                </button>
-                <hr />
-                <a
-                  href="money-donation.html"
-                  type="submit"
-                  class="btn btn-success btn-block"
-                  style="color: #fff;"
-                >
-                  Money Donation
-                </a>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="button-submmited"
+                    style="display: none;"
+                    disabled
+                  >
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Submitting...
+                  </button>
+                  <button
+                    type="submit"
+                    id="button-unsubmmited"
+                    class="btn btn-primary"
+                  >
+                    Submit Request
+                  </button>
+                </div>
+                <div class="col-md-6 col-sm-6 text-right">
+                  <a
+                    href="money-donation.html"
+                    class="btn btn-success"
+                    style="color: #fff;"
+                  >
+                    Money Donation
+                  </a>
+                </div>
               </div>
             </form>
           </div>

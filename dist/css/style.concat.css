@@ -136,7 +136,7 @@ a {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)), url(../images/banner.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)), url(../images/banner.jpg);
   background-size: cover;
   background-position: top;
   z-index: 1;
